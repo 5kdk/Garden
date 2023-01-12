@@ -1,5 +1,15 @@
 # **21 this**
 
+- [**21 this**](#21-this)
+  - [**들어가며 🎈**](#들어가며-)
+  - [**this 키워드**](#this-키워드)
+  - [**함수 호출 방식과 this 바인딩**](#함수-호출-방식과-this-바인딩)
+    - [**일반 함수 호출**](#일반-함수-호출)
+    - [**메서드 호출**](#메서드-호출)
+    - [**생성자 함수 호출**](#생성자-함수-호출)
+    - [**Function.prototype.apply/call/bind 메서드에 의한 간접 호출**](#functionprototypeapplycallbind-메서드에-의한-간접-호출)
+
+
 <br>
 
 ## **들어가며 🎈**
@@ -42,6 +52,7 @@
 <br>
 
 ### **일반 함수 호출**
+
 기본적으로 `this`에는 전역 객체가 바인딩된다.
 
 ```javascript
@@ -97,6 +108,7 @@ const obj = {
 
 obj.foo();
 ```
+
 콜백 함수가 일반 함수로 호출된다면 콜백 함수 내부의 `this`에도 전역 객체가 바인딩된다. 어떠한 함수라도 일반 함수로 호출되면 `this`에 전역 객체가 바인딩된다.
 
 ```javascript
@@ -140,7 +152,9 @@ const obj = {
 
 obj.foo();
 ```
+
 위 방법 이외에도 자바스크립트는 `this`를 명시적으로 바인딩할 수 있는 메서드를 제공한다.
+
 - `Function.prototype.apply`
 - `Function.prototype.call`
 - `Function.prototype.bind`
@@ -187,15 +201,18 @@ console.log(getName()); // ''
 <br>
 
 ### **생성자 함수 호출**
+
 생성자 함수 내부의 `this`에는 생성자 함수가 (미래에) 생성할 인스턴스가 바인딩된다.
 
 <br>
 
 ### **Function.prototype.apply/call/bind 메서드에 의한 간접 호출**
+
 `apply`, `call` 메서드는 `this`로 사용할 객체와 인수 리스트를 인수로 전달받아 함수를 호출한다. `apply`와 `call` 메서드의 사용법은 다음과 같다.
 
 ```javascript
 function getThisBinding() {
+  console.log(arguments);
   return this;
 }
 
@@ -205,8 +222,66 @@ const thisArg = { a: 1 };
 console.log(getThisBinding()); // window
 
 // getThisBinding 함수를 호출하면서 인수로 전달한 객체를 getThisBinding 함수의 this에 바인딩한다.
-console.log(getThisBinding.apply(thisArg)); // {a: 1}
-console.log(getThisBinding.call(thisArg)); // {a: 1}
+// apply 메서드는 호출할 함수의 인수를배열로 묶어 전달한다.
+console.log(getThisBinding.apply(thisArg, [1, 2, 3]));
+// Arguments(3) [1, 2, 3, callee: f, Symbol(Symbol.iterator: f)]
+// {a: 1}
+
+// call 메서드는 호출할 함수의 인수를 쉼표로 구분한 리스트 형식으로 전달한다.
+console.log(getThisBinding.call(thisArg, 1, 2, 3));
+// Arguments(3) [1, 2, 3, callee: f, Symbol(Symbol.iterator: f)]
+// {a: 1}
+```
+
+`apply`와 `call` 메서드의 대표적인 용도는 `aruguments` 객체와 같은 유사 배열 객체에 배열 메서드를 사용하는 경우다.
+
+```javascript
+function convertArgToArray() {
+  console.log(arguments);
+
+  // arguments 객체를 배열로 변환
+  // Array.prototype.slice를 인수 없이 호출하면 배열의 복사본을 생성한다.
+  const arr = Array.prototype.slice.call(arguments);
+  // const arr = Array.prototype.slice.apply(arguments);
+  console.log(arr);
+
+  return arr;
+}
+
+convertArgToArray(1, 2, 3);
+```
+
+`Function.prototype.bind` 메서드는 `apply`와 `call` 메서드와 달리 함수를 호출하지 않는다. 다만 첫 번째 인수로 전달한 값으로 `this` 바인딩이 교체된 함수를 새롭게 생성해 반환한다.
+
+```javascript
+function getThisBinding() {
+  return this;
+}
+
+// this로 사용할 객체
+const thisArg = { a: 1 };
+
+// bind 메서드는 첫 번째 인수로 전달한 thisArg로 this 바인딩이 교체된다
+// getThisBinding 함수를 새롭게 생성해 반환한다.
+console.log(getThisBinding.bind(thisArg)); // getThisBinding
+// bind 메서드는 함수를 호출하지는 않으므로 명시적으로 호출해야 한다.
+console.log(getThisBinding.bind(thisArg)()); // {a: 1}
+```
+
+`bind` 메서드는 메서드의 `this`와 메서드 내부의 중첩 함수 또는 콜백 함수의 `this`가 불일치하는 문제를 해결하기 위해 유용하게 사용된다.
+
+```javascript
+const person = {
+  name: 'Lee',
+  foo(callback) {
+    // bind 메서드로 callback 함수 내부의 this 바인딩을 전달
+    setTimeout(callback.bind(this), 100);
+  },
+};
+
+person.foo(function () {
+  console.log(`Hi! my name is ${this.name}.`);
+});
 ```
 
 <br>
@@ -215,9 +290,9 @@ console.log(getThisBinding.call(thisArg)); // {a: 1}
 
 ✔ **정리**
 
-<center>함수 호출 방식</center> | <center>this 바인딩</center>
---- | --- 
-일반 함수 호출 | 전역 객체
-메서드 호출 | 메서드를 호출한 객체
-생성자 함수 호출 | 생성자 함수가 (미래에) 생성할 인스턴스
-`Function.prototype.apply/call/bind` 메서드에 의한 간접 호출 | `Function.prototype.apply/call/bind` 메서드애 첫번째 인수로 전달한 객체
+| <center>함수 호출 방식</center>                              | <center>this 바인딩</center>                                            |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| 일반 함수 호출                                               | 전역 객체                                                               |
+| 메서드 호출                                                  | 메서드를 호출한 객체                                                    |
+| 생성자 함수 호출                                             | 생성자 함수가 (미래에) 생성할 인스턴스                                  |
+| `Function.prototype.apply/call/bind` 메서드에 의한 간접 호출 | `Function.prototype.apply/call/bind` 메서드애 첫번째 인수로 전달한 객체 |
