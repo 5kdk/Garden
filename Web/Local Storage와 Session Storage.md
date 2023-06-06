@@ -1,4 +1,4 @@
-## **Local Storage와 Session Storage**
+# **Local Storage와 Session Storage**
 
 - 로컬 스토리지(Local Storage)와 세션 스토리지(Session Storage)는 웹 브라우저에서 클라이언트 측에 데이터를 저장하는 두 가지 웹 스토리지 메커니즘이다. 이 두 가지 스토리지는 다음과 같은 차이점이 있다.
 

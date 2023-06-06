@@ -1,6 +1,4 @@
-## **CORS**
-
-### 교차 출처 리소스 공유(Cross-Origin Resource Sharing)
+# **CORS**(Cross-Origin Resource Sharing, 교차 출처 리소스 공유)
 
 - CORS(Cross-Origin Resource Sharing)는 웹 애플리케이션에서 동일한 출처가 아닌 리소스에 접근하는 것을 제어하는 보안 메커니즘이다. 웹 브라우저에서는 보안 상의 이유로 스크립트에서 다른 도메인, 포트, 프로토콜에서 호스팅되는 리소스에 직접 액세스할 수 없도록 제한한다. 따라서, 동일 출처 정책(Same-Origin Policy)에 위배되는 상황에서는 추가적인 설정이 필요하다.(ex: 개발환경에서의 Proxy 우회, axios에서의 `{ withCredentials: true }` 등)
 
