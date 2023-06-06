@@ -1,6 +1,6 @@
 # 리액트 관련 자료 모음
 
-## 링크로 이동 `Ctrl + Click`
+### 링크로 이동 `Ctrl + Click`
 
 ### React
 
@@ -81,4 +81,4 @@
 - [react-query]()
   - [Suspense](https://tanstack.com/query/v4/docs/react/guides/suspense)
   - [react-error-boundary](https://github.com/bvaughn/react-error-boundary#readme)
-  - [QueryErrorResetBoundary](https://tanstack.com/query/v4/docs/react/reference/QueryErrorResetBoundary) / [useQueryErrorResetBoundary](https://tanstack.com/query/v4/docs/react/reference/useQueryErrorResetBoundary)
+  - [QueryErrorResetBoundary](https://tanstack.com/query/v4/docs/react/reference/QueryErrorResetBoundary/) [useQueryErrorResetBoundary](https://tanstack.com/query/v4/docs/react/reference/useQueryErrorResetBoundary)
