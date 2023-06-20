@@ -90,7 +90,7 @@
 
 <br>
 
-### **ECMAScript는 왜 fill 메서드를 참조 방식으로 구현해놓았을까?**
+### **ECMAScript는 왜 fill 메서드를 이런 방식으로 구현해놓았을까?**
 
 > chatGPT 인용
 
