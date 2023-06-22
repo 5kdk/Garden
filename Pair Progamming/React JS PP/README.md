@@ -38,5 +38,5 @@
 - [16. analog clock](./16.%20analog%20clock)
 - [17. tree view](./17.%20tree%20view)
 - [18. star rating](./18.%20star%20rating)
-- [19. calendar and datepicker](./19.%20calendar%20and%20datepicker)
-- [20. news viewer](./20.%20news%20viewer)
+- 19\. calendar and datepicker
+- 20\. news viewer
