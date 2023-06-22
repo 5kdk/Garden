@@ -1,8 +1,8 @@
 # 리액트 관련 자료 모음
 
-### 링크로 이동 `Ctrl + Click`
+#### 링크로 이동 `Ctrl + Click`
 
-### React
+#### React
 
 - [useState](https://react.dev/reference/react/useState)
 - [useEffect](https://react.dev/reference/react/useEffect)
@@ -14,6 +14,7 @@
 - [useMemo](https://beta.reactjs.org/reference/react/useMemo)
   - [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
   - [How to useMemo and useCallback: you can remove most of them](https://www.developerway.com/posts/how-to-use-memo-use-callback)
+  - [The purpose of useCallback()](https://dmitripavlutin.com/react-usecallback/#2-the-purpose-of-usecallback)
 - reactive (derived) state
   - [What is derived state in React, and why is it important?](https://stackoverflow.com/questions/58288286/what-is-derived-state-in-react-and-why-is-it-important)
 - [synthetic event](https://beta.reactjs.org/reference/react-dom/components/common#react-event-object)
@@ -40,7 +41,7 @@
 
 <br>
 
-### Styled Component
+#### Styled Component
 
 - [global styles](https://styled-components.com/docs/api#createglobalstyle)
 - [adapting based on props](https://styled-components.com/docs/basics#adapting-based-on-props)
@@ -49,14 +50,14 @@
 
 <br>
 
-### Vite
+#### Vite
 
 - [vite proxy](https://vitejs-kr.github.io/config/server-options.html#server-proxy)
   - [CORS](https://velog.io/@sonwj0915/CORS%EC%99%80-Proxy%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0)
 
 <br>
 
-### Recoil
+#### Recoil
 
 - [Handling global state in React in 2022](https://www.osedea.com/en/blog/handling-global-state-in-react-in-2022)
 - [Recoil - 또 다른 React 상태 관리 라이브러리?](https://ui.toast.com/weekly-pick/ko_20200616)
@@ -64,7 +65,7 @@
 
 <br>
 
-### React Query
+#### React Query
 
 - [카카오페이 프론트엔드 개발자들이 React Query를 선택한 이유](https://tech.kakaopay.com/post/react-query-1/)
 - [react query (server state)](https://tanstack.com/query/latest)
@@ -82,3 +83,9 @@
   - [Suspense](https://tanstack.com/query/v4/docs/react/guides/suspense)
   - [react-error-boundary](https://github.com/bvaughn/react-error-boundary#readme)
   - [QueryErrorResetBoundary](https://tanstack.com/query/v4/docs/react/reference/QueryErrorResetBoundary/) [useQueryErrorResetBoundary](https://tanstack.com/query/v4/docs/react/reference/useQueryErrorResetBoundary)
+
+<br>
+
+#### ETC.
+
+- [선언적인 코드 작성하기](https://toss.tech/article/frontend-declarative-code)
