@@ -1,4 +1,4 @@
-# useMemo, useCallback 최적화가 꼭 필요할까?
+# useCallback으로 useEffect심화활용
 
 _(2022.12 블로그 글 옮김)_
 
