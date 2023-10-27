@@ -55,6 +55,11 @@ DOM이 렌더링되면 페이지에서 가장 큰 요소가 변경될 수 있습
 
 ![lcp-example](./assets/Performance%20&%20Core%20Web%20Vitals/lcp-example.avif)
 
+> **추가 읽을거리**
+>
+> - Google: [Largest Contentful Paint Documentation](https://web.dev/lcp/)
+> - Vercel: [Blog: Core Web Vitals - Largest Contentful Paint](https://vercel.com/blog/core-web-vitals#largest-contentful-paint)
+
 <br />
 
 ## First Input Delay (FID)
@@ -66,6 +71,11 @@ FID(첫 번째 입력 지연) 지표는 웹 페이지와 상호 작용하는 동
 FID는 실제 사용자 데이터가 필요하며 실험실에서는 측정할 수 없습니다(예: Google Lighthouse). 그러나 총 차단 시간(TBT) 지표는 실험실에서 측정할 수 있으며 상호 작용에 영향을 미치는 문제를 파악할 수 있습니다.
 
 ![fid-example](./assets/Performance%20&%20Core%20Web%20Vitals/fid-example.png)
+
+> **추가 읽을거리**
+>
+> - Google: [First Input Delay Documentation](https://web.dev/fid/)
+> - Vercel: [Blog: Core Web Vitals - First Input Delay](https://vercel.com/blog/core-web-vitals#first-input-delay)
 
 <br />
 
@@ -80,6 +90,11 @@ FID는 실제 사용자 데이터가 필요하며 실험실에서는 측정할 �
 ![cls-example](./assets/Performance%20&%20Core%20Web%20Vitals/cls-example.png)
 
 각 요소의 개별 레이아웃 이동 점수는 예기치 않은 이동이 발생한 경우에만 CLS에 계산됩니다. 새 요소가 DOM에 추가되거나 기존 요소의 크기가 변경되더라도 로드된 요소가 그 위치를 유지하면 레이아웃 이동 점수에 포함되지 않습니다.
+
+> **추가 읽을거리**
+>
+> - Google: [Cumulative Layout Shift Documentation](https://web.dev/cls/)
+> - Vercel: [Blog: Core Web Vitals - Cumulative Layout Shift](https://vercel.com/blog/core-web-vitals#cumulative-layout-shift)
 
 <br />
 
