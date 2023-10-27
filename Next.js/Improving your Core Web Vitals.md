@@ -65,7 +65,7 @@ Lighthouse는 제공된 URL에 대해 일련의 감사를 실행하는 방식으
 
 다음은 보고서 예시입니다:
 
-![lighthouse](./assets/Improving%20your%20Core%20Web%20Vital/lighthouse.png)
+![lighthouse](./assets/Improving%20your%20Core%20Web%20Vitals/lighthouse.png)
 
 <br />
 
