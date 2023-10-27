@@ -6,3 +6,6 @@ format.md
 
 # pdf file
 .pdf
+
+# for mac
+.DS_Store
