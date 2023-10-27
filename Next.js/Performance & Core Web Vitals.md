@@ -4,8 +4,8 @@
   - [First Input Delay (FID)](#first-input-delay-fid)
   - [Cumulative Layout Shift (CLS)](#cumulative-layout-shift-cls)
   - [SEO Impact](#seo-impact)
-  - [Lighthouse (v6) 바이탈 가중치](#lighthouse-v6-바이탈-가중치)
-  - [UX Impact](#ux-impact)
+    - [Lighthouse (v6) 바이탈 가중치](#lighthouse-v6-바이탈-가중치)
+    - [UX Impact](#ux-impact)
 
 <br />
 
@@ -93,7 +93,7 @@ Google 검색 엔진의 주요 목표는 현지화 및 맞춤법 오류를 고�
 
 ![page-experience](./assets/Performance%20&%20Core%20Web%20Vitals/page-experience.png)
 
-## Lighthouse (v6) 바이탈 가중치
+### Lighthouse (v6) 바이탈 가중치
 
 세 가지 지표의 가치가 반드시 동일하지는 않습니다. 라이트하우스에서는 각 코어 웹 바이탈에 다른 가중치가 할당됩니다:
 
@@ -108,7 +108,7 @@ Google 검색 엔진의 주요 목표는 현지화 및 맞춤법 오류를 고�
 
 > **Note**: Google 순위 영향은 개별 코어 웹 바이탈 점수에 관계없이 모든 코어 웹 바이탈의 양호 범위에 있는 모든 페이지에 동일하게 적용됩니다.
 
-## UX Impact
+### UX Impact
 
 코어 웹 바이탈에 대한 대부분의 대화는 주로 SEO에 초점을 맞추고 있습니다.
 
