@@ -5,7 +5,7 @@
 > 기록한 노트들은 복습 및 블로그 컨텐츠 제작으로 정보공유에 활용합니다!
 
 ```
-📦My-Notes
+📦Garden
  ┣ 📂JavaScript
  ┣ 📂Next.js
  ┣ 📂Pair Progamming
