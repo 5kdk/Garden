@@ -2,11 +2,12 @@
 
 > **Info**  
 > 새로 배운 내용이나, 책 정리, 회고 등 개발자로서 성장에 도움이 되는 양분들을 기록하는 텃밭 Repo입니다.  
-> 기록한 노트들은 복습 및 블로그나 정보공유 수단에 활용합니다!
+> 기록한 노트들은 복습 및 블로그 컨텐츠 제작으로 정보공유에 활용합니다!
 
 ```
 📦My-Notes
  ┣ 📂JavaScript
+ ┣ 📂Next.js
  ┣ 📂Pair Progamming
  ┃ ┣ 📂React JS PP
  ┃ ┣ 📂Vanilla JS PP 1
@@ -18,6 +19,7 @@
 ```
 
 - [JavaScript](./JavaScript/)
+- [Pair Programming](./Next.js/)
 - [Pair Programming](./Pair%20Progamming/)
   - [React JS PP](./Pair%20Progamming/React%20JS%20PP/)
   - [Vanilla JS PP 1](./Pair%20Progamming/Vanilla%20JS%20PP%201/)
